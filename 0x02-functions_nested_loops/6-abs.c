@@ -10,4 +10,3 @@ int _abs(int i)
 {
 	return (i < 0 ? -i : i);
 }
-© 2022 GitHub, Inc.
