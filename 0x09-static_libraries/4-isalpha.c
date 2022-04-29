@@ -1,14 +1,19 @@
 #include "main.h"
+
 /**
- * _isalpha - returns 1 if c is a letter
- * @c: integer to be tested
- * Return: 1 or 0
+ * _strpbrk - finds first matching char in string
+ * @s: input string to search for matching char
+ * @accept: characters that could be matched
+ * Return: pointer to matching char
  */
-int _isalpha(int c)
+
+char *_strpbrk(char *s, char *accept)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	unsigned int i, j;
+
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; accept[j] != '\0'; j++)
+			if (s[i] == accept[j])
+				goto exit;
+exit: return (s[i] != '\0' ? s + i : '\0');
 }
