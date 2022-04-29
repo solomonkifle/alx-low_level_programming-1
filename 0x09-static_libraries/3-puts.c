@@ -8,11 +8,6 @@
  *    * Return: void
  *
  *    */
-
-
-
-
-
 void _puts(char *str)
 
 {
@@ -22,13 +17,8 @@ void _puts(char *str)
 	while (str[i])
 
 	{
-
 			_putchar(str[i]);
-
 				i++;
-
 	}
-
 	_putchar('\n');
-
 }
